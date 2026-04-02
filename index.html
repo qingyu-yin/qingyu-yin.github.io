@@ -21,15 +21,24 @@ navbar_title: Home
             <div class="card-body">
                 <h4 class="font-weight-bold">Experience</h4>
                 <ul class="list-unstyled mb-0">
-                    {% for item in site.data.profile.experience %}
-                    <li class="mb-2">
-                        <div class="d-flex justify-content-between">
-                            <div><strong>{{ item.name }}</strong></div>
-                            <div class="text-muted small no-break ml-2"><em>{{ item.date }}</em></div>
+                    <li class="mb-3">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <div>
+                                <strong>Amazon &mdash; Rufus, Store Foundation Modeling Team</strong><br>
+                                <span class="text-muted">Post-training Lead &amp; Science Manager</span>
+                            </div>
+                            <div class="text-muted small no-break ml-3">Mar. 2023 &ndash; Present</div>
                         </div>
-                        <div class="text-muted small">{{ item.position }}</div>
                     </li>
-                    {% endfor %}
+                    <li class="mb-3">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <div>
+                                <strong>Amazon &mdash; Search, Query Understanding</strong><br>
+                                <span class="text-muted">Applied Scientist</span>
+                            </div>
+                            <div class="text-muted small no-break ml-3">Jul. 2019 &ndash; Mar. 2023</div>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -39,15 +48,24 @@ navbar_title: Home
             <div class="card-body">
                 <h4 class="font-weight-bold">Education</h4>
                 <ul class="list-unstyled mb-0">
-                    {% for item in site.data.profile.education %}
-                    <li class="mb-2">
-                        <div class="d-flex justify-content-between">
-                            <div><strong>{{ item.name }}</strong></div>
-                            <div class="text-muted small no-break ml-2"><em>{{ item.date }}</em></div>
+                    <li class="mb-3">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <div>
+                                <strong>Harbin Institute of Technology</strong><br>
+                                <span class="text-muted">Ph.D. in Computer Science &mdash; Advisor: Professor Ting Liu</span>
+                            </div>
+                            <div class="text-muted small no-break ml-3">Sep. 2013 &ndash; Jul. 2019</div>
                         </div>
-                        <div class="text-muted small">{{ item.position }}</div>
                     </li>
-                    {% endfor %}
+                    <li class="mb-3">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <div>
+                                <strong>Harbin Institute of Technology</strong><br>
+                                <span class="text-muted">B.S. in Computer Science</span>
+                            </div>
+                            <div class="text-muted small no-break ml-3">Sep. 2009 &ndash; Jun. 2013</div>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -68,117 +86,96 @@ navbar_title: Home
                     <li>
                         <strong class="pub-tag">[EMNLP'25]</strong> <strong>Can Language Models Follow Multiple Turns of Entangled Instructions?</strong><br>
                         Chi Han, Xin Liu, Haodong Wang, Shiyang Li, Jingfeng Yang, Haoming Jiang, Zhengyang Wang, <strong class="pub-me">Qingyu Yin</strong>, et al.<br>
-                        EMNLP 2025 Findings.
                     </li>
                     <li>
                         <strong class="pub-tag">[NAACL'25]</strong> <strong>IHEval: Evaluating Language Models on Following the Instruction Hierarchy</strong><br>
                         Zhihan Zhang, Shiyang Li, Zixuan Zhang, Xin Liu, Haoming Jiang, Xianfeng Tang, Yifan Gao, Zheng Li, Haodong Wang, Zhaoxuan Tan, Yichuan Li, <strong class="pub-me">Qingyu Yin</strong>, Bing Yin, Meng Jiang.<br>
-                        NAACL 2025.
                     </li>
                     <li>
                         <strong class="pub-tag">[npj Digital Medicine'25]</strong> <strong>A Multimodal Multidomain Multilingual Medical Foundation Model for Zero Shot Clinical Diagnosis</strong><br>
                         Fenglin Liu, Zheng Li, <strong class="pub-me">Qingyu Yin</strong>, Jinfa Huang, et al.<br>
-                        npj Digital Medicine, 2025.
                     </li>
                     <li>
                         <strong class="pub-tag">[NeurIPS'24]</strong> <strong>Shopping MMLU: A Massive Multi-Task Online Shopping Benchmark for Large Language Models</strong><br>
                         Yilun Jin, Zheng Li, Chenwei Zhang, Tianyu Cao, Yifan Gao, Pratik Jayarao, Mao Li, Xin Liu, Ritesh Sarkhel, Xianfeng Tang, Haodong Wang, Zhengyang Wang, Wenju Xu, Jingfeng Yang, <strong class="pub-me">Qingyu Yin</strong>, et al.<br>
-                        NeurIPS 2024, KDD Cup'24.
+                        <span style="color: #dc3545; font-weight: 600;">KDD Cup'24.</span>
                     </li>
                     <li>
                         <strong class="pub-tag">[KDD'24]</strong> <strong>Understanding Inter-Session Intentions via Complex Logical Reasoning</strong><br>
                         Jiaxin Bai, Chen Luo, Zheng Li, <strong class="pub-me">Qingyu Yin</strong>, Yangqiu Song.<br>
-                        KDD 2024.
                     </li>
                     <li>
                         <strong class="pub-tag">[EMNLP'24]</strong> <strong>Large Language Models in the Clinic: A Comprehensive Benchmark</strong><br>
                         Fenglin Liu, Zheng Li, Hongjian Zhou, <strong class="pub-me">Qingyu Yin</strong>, et al.<br>
-                        EMNLP 2024.
                     </li>
                     <li>
                         <strong class="pub-tag">[NAACL'24]</strong> <strong>IterAlign: Iterative Constitutional Alignment of Large Language Models</strong><br>
                         Xiusi Chen, Hongzhi Wen, Sreyashi Nag, Chen Luo, <strong class="pub-me">Qingyu Yin</strong>, Ruirui Li, Zheng Li, Wei Wang.<br>
-                        NAACL 2024.
                     </li>
                     <li>
                         <strong class="pub-tag">[EMNLP'23]</strong> <strong>Knowledge-Selective Pretraining for Attribute Value Extraction</strong><br>
                         Hui Liu, <strong class="pub-me">Qingyu Yin</strong>, Zhengyang Wang, et al.<br>
-                        EMNLP 2023 Findings.
                     </li>
                     <li>
                         <strong class="pub-tag">[EMNLP'23]</strong> <strong>Improving Consistency for Text Summarization with Energy Functions</strong><br>
                         Qi Zeng, <strong class="pub-me">Qingyu Yin</strong>, Zheng Li, et al.<br>
-                        EMNLP 2023 Findings.
                     </li>
                     <li>
                         <strong class="pub-tag">[ACL'23]</strong> <strong>Context-Aware Query Rewriting for Improving Users' Search Experience on E-commerce Websites</strong><br>
                         Simiao Zuo, <strong class="pub-me">Qingyu Yin</strong>, Haoming Jiang, Shaohui Xi, Bing Yin, Chao Zhang, Tuo Zhao.<br>
-                        ACL 2023.
                     </li>
                     <li>
                         <strong class="pub-tag">[ACL'23]</strong> <strong>Graph Reasoning for Question Answering with Triplet Retrieval</strong><br>
                         Shiyang Li, Yifan Gao, Haoming Jiang, <strong class="pub-me">Qingyu Yin</strong>, Zheng Li, Xifeng Yan, Chao Zhang, Bing Yin.<br>
-                        ACL 2023 Findings.
                     </li>
                     <li>
                         <strong class="pub-tag">[KDD'23]</strong> <strong>Knowledge Graph Reasoning over Entities and Numerical Values</strong><br>
                         Jiaxin Bai, Chen Luo, Zheng Li, <strong class="pub-me">Qingyu Yin</strong>, Bing Yin, Yangqiu Song.<br>
-                        KDD 2023.
                     </li>
                     <li>
                         <strong class="pub-tag">[NAACL'22]</strong> <strong>Retrieval-Augmented Multilingual Keyphrase Generation with Retriever-Generator Iterative Training</strong><br>
                         Yifan Gao, <strong class="pub-me">Qingyu Yin</strong>, Zheng Li, Rui Meng, et al.<br>
-                        NAACL 2022.
                     </li>
                     <li>
                         <strong class="pub-tag">[NAACL'22]</strong> <strong>All Information Is Valuable: Question Matching over Full Information Transmission Network</strong><br>
                         Le Qi, Yu Zhang, <strong class="pub-me">Qingyu Yin</strong>, Guidong Zheng, Wen Junjie, Jinlong Li, Ting Liu.<br>
-                        NAACL 2022.
                     </li>
                     <li>
                         <strong class="pub-tag">[NAACL'22]</strong> <strong>SeqZero: Few-shot Compositional Semantic Parsing with Sequential Prompts and Zero-shot Models</strong><br>
                         Jingfeng Yang, Haoming Jiang, <strong class="pub-me">Qingyu Yin</strong>, Danqing Zhang, Bing Yin, Diyi Yang.<br>
-                        NAACL 2022 Findings.
                     </li>
                     <li>
                         <strong class="pub-tag">[NAACL'22]</strong> <strong>CERES: Pretraining of Graph-Conditioned Transformer for Semi-Structured Session Data</strong><br>
                         Rui Feng, Chen Luo, <strong class="pub-me">Qingyu Yin</strong>, Bing Yin, Tuo Zhao, Chao Zhang.<br>
-                        NAACL 2022.
                     </li>
                     <li>
                         <strong class="pub-tag">[EMNLP'21]</strong> <strong>Logic-level Evidence Retrieval and Graph-based Verification Network for Table-based Fact Verification</strong><br>
                         Qi Shi, Yu Zhang, <strong class="pub-me">Qingyu Yin</strong>, Ting Liu.<br>
-                        EMNLP 2021.
                     </li>
                     <li>
                         <strong class="pub-tag">[ACM TALLIP]</strong> <strong>Chinese Zero Pronoun Resolution: A Collaborative Filtering-based Approach</strong><br>
                         <strong class="pub-me">Qingyu Yin</strong>, Yu Zhang, Weinan Zhang, Ting Liu.<br>
-                        ACM Transactions on Asian and Low-Resource Language Information Processing.
                     </li>
                     <li>
                         <strong class="pub-tag">[ACL'19]</strong> <strong>Towards Explainable NLP: A Generative Explanation Framework for Text Classification</strong><br>
                         Hui Liu, <strong class="pub-me">Qingyu Yin</strong>, William Yang Wang.<br>
-                        ACL 2019.
                     </li>
                     <li>
                         <strong class="pub-tag">[ACL'18]</strong> <strong>Deep Reinforcement Learning for Chinese Zero Pronoun Resolution</strong><br>
                         <strong class="pub-me">Qingyu Yin</strong>, Yu Zhang, Weinan Zhang, Ting Liu, William Yang Wang.<br>
-                        ACL 2018.
                     </li>
                     <li>
                         <strong class="pub-tag">[COLING'18]</strong> <strong>Zero Pronoun Resolution with Attention-based Neural Network</strong><br>
                         <strong class="pub-me">Qingyu Yin</strong>, Yu Zhang, Weinan Zhang, Ting Liu, William Yang Wang.<br>
-                        COLING 2018.
                     </li>
                     <li>
                         <strong class="pub-tag">[EMNLP'17]</strong> <strong>Chinese Zero Pronoun Resolution with Deep Memory Network</strong><br>
                         <strong class="pub-me">Qingyu Yin</strong>, Yu Zhang, Weinan Zhang, Ting Liu.<br>
-                        EMNLP 2017.
                     </li>
                     <li>
                         <strong class="pub-tag">[CCIR'14]</strong> <strong>Joint Model for Ellipsis Identification and Recovery</strong><br>
                         <strong class="pub-me">Qingyu Yin</strong>, Weinan Zhang, Yu Zhang, Ting Liu.<br>
-                        CCIR 2014. <span style="color: #dc3545; font-weight: 600;">Best Student Paper.</span>
+                        <span style="color: #dc3545; font-weight: 600;">Best Student Paper.</span>
                     </li>
                 </ul>
             </div>
