@@ -21,7 +21,7 @@ short_bio: >-
     successfully launched it worldwide.
   </p>
   <p>
-    I lead a team of 30 scientists owning the end-to-end post-training stack for Rufus LLMs, spanning
+    <strong>I lead 30 scientists owning the end-to-end post-training stack for Rufus LLMs</strong>, spanning
     SFT and RL. We design and scale post-training recipes to advance core capabilities, including
     reasoning, instruction following, agentic, and helpfulness, and drive application-level preference
     alignment for Rufus.
