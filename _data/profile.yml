@@ -3,11 +3,11 @@ secondary_name: ""
 navbar_name: "Qingyu Yin"
 
 positions:
-- name: Post-training Lead & Science Manager
-- name: Amazon Rufus
+- name: "<strong>Post-training Lead</strong>"
+- name: '<a href="https://www.aboutamazon.com/news/retail/amazon-rufus" target="_blank">Amazon Rufus</a>'
 
 email: "yinqingyucn@gmail.com"
-cv_link: /Qingyu_Resume-latest.pdf
+# cv_link: /Qingyu_Resume-latest.pdf
 gscholar: P-mBKNYAAAAJ
 # github: your_github_id
 linkedin: qingyu-yin
@@ -21,10 +21,10 @@ short_bio: >-
     successfully launched it worldwide.
   </p>
   <p>
-    I currently lead a team of 18 scientists owning end-to-end post-training for Rufus LLMs, covering
-    SFT and RL to improve core capabilities including reasoning, instruction following, agent, and
-    helpfulness. My research interests span large language model post-training, reinforcement learning
-    from human feedback, agentic AI, and NLP.
+    I lead a team of 30 scientists owning the end-to-end post-training stack for Rufus LLMs, spanning
+    SFT and RL. We design and scale post-training recipes to advance core capabilities, including
+    reasoning, instruction following, agentic, and helpfulness, and drive application-level preference
+    alignment for Rufus.
   </p>
   <p>
     Prior to Rufus, I was a Senior Applied Scientist at Amazon Search, where I led the development of large-scale
