@@ -15,8 +15,7 @@ linkedin: qingyu-yin
 short_bio_text_justify: false
 short_bio: >-
   <p>
-    I am a Post-training Lead & Science Manager at Amazon, where I am a founding member of
-    <strong>Rufus</strong> &mdash; Amazon's LLM-powered shopping assistant. I trained the in-house LLM from
+    I am a Post-training Lead & Science Manager at <strong>Rufus</strong>, Amazon's LLM-powered shopping assistant. We trained the in-house LLM from
     scratch and built Rufus end-to-end, from core model development to customer-facing features, and
     successfully launched it worldwide.
   </p>
