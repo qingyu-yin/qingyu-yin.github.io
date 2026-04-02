@@ -16,9 +16,41 @@ navbar_title: Home
         {% include widgets/debug_repo_name.html %}
         {% include widgets/debug_url.html %}
 
-        {% if site.data.display.homepage.show_experience %}
-            {% include widgets/experience_card.html %}
-        {% endif %}
+        <!-- Experience -->
+        <div class="card mb-3">
+            <div class="card-body">
+                <h4 class="font-weight-bold">Experience</h4>
+                <ul class="list-unstyled mb-0">
+                    {% for item in site.data.profile.experience %}
+                    <li class="mb-2">
+                        <div class="d-flex justify-content-between">
+                            <div><strong>{{ item.name }}</strong></div>
+                            <div class="text-muted small no-break ml-2"><em>{{ item.date }}</em></div>
+                        </div>
+                        <div class="text-muted small">{{ item.position }}</div>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+
+        <!-- Education -->
+        <div class="card mb-3">
+            <div class="card-body">
+                <h4 class="font-weight-bold">Education</h4>
+                <ul class="list-unstyled mb-0">
+                    {% for item in site.data.profile.education %}
+                    <li class="mb-2">
+                        <div class="d-flex justify-content-between">
+                            <div><strong>{{ item.name }}</strong></div>
+                            <div class="text-muted small no-break ml-2"><em>{{ item.date }}</em></div>
+                        </div>
+                        <div class="text-muted small">{{ item.position }}</div>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
 
         {% if site.data.display.homepage.show_news %}
         {% assign count_news = site.news | size %}
