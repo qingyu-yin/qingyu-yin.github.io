@@ -1,392 +1,156 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Qingyu Yin</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: #333;
-            line-height: 1.7;
-            background: #fafafa;
-        }
-        a { color: #92400e; text-decoration: none; }
-        a:hover { text-decoration: underline; }
+---
+layout: default
+title : Homepage
+navbar_title: Home
+---
 
-        /* Header */
-        .header {
-            background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
-            color: #fff;
-            padding: 60px 0 50px;
-        }
-        .header-inner {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 0 24px;
-            display: flex;
-            align-items: center;
-            gap: 40px;
-        }
-        .avatar {
-            width: 160px;
-            height: 160px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid rgba(255,255,255,0.3);
-            flex-shrink: 0;
-        }
-        .header-text h1 { font-size: 2.2rem; font-weight: 700; margin-bottom: 6px; }
-        .header-text .tagline { font-size: 1.05rem; color: #cbd5e1; margin-bottom: 14px; }
-        .header-text .contact { display: flex; flex-wrap: wrap; gap: 8px 20px; font-size: 0.9rem; color: #94a3b8; }
-        .header-text .contact a { color: #fbbf24; }
-
-        /* Nav */
-        .nav {
-            background: #fff;
-            border-bottom: 1px solid #e2e8f0;
-            position: sticky;
-            top: 0;
-            z-index: 10;
-        }
-        .nav-inner {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 0 24px;
-            display: flex;
-            gap: 32px;
-            overflow-x: auto;
-        }
-        .nav a {
-            padding: 14px 0;
-            font-size: 0.92rem;
-            font-weight: 500;
-            color: #64748b;
-            border-bottom: 2px solid transparent;
-            white-space: nowrap;
-        }
-        .nav a:hover, .nav a.active {
-            color: #1e293b;
-            border-bottom-color: #b45309;
-            text-decoration: none;
-        }
-
-        /* Main */
-        .main { max-width: 900px; margin: 0 auto; padding: 0 24px; }
-        section { padding: 40px 0; border-bottom: 1px solid #e2e8f0; }
-        section:last-child { border-bottom: none; }
-        h2 { font-size: 1.4rem; font-weight: 700; color: #1e293b; margin-bottom: 20px; }
-        h3 { font-size: 1.1rem; font-weight: 600; color: #1e293b; }
-
-        /* About */
-        .about p { font-size: 1rem; color: #475569; }
-
-        /* Experience */
-        .job { margin-bottom: 32px; }
-        .job-header { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; margin-bottom: 4px; }
-        .job-header .company { font-size: 1.1rem; font-weight: 600; color: #1e293b; }
-        .job-header .team { font-size: 0.92rem; color: #64748b; }
-        .job-title { font-size: 0.95rem; color: #b45309; font-style: italic; margin-bottom: 8px; }
-        .job-date { font-size: 0.85rem; color: #94a3b8; }
-        .job p, .job li { font-size: 0.93rem; color: #475569; }
-        .job ul { padding-left: 20px; margin-top: 6px; }
-        .job li { margin-bottom: 4px; }
-        .highlight-title { font-weight: 600; color: #334155; }
-
-        /* Publications */
-        .pub-note { font-size: 0.9rem; color: #64748b; font-style: italic; margin-bottom: 16px; }
-        .pub-list { list-style: disc; padding-left: 20px; }
-        .pub-list li {
-            padding: 8px 0;
-            font-size: 0.93rem;
-            color: #475569;
-            line-height: 1.6;
-        }
-        .pub-list .pub-title { font-weight: 700; color: #1e293b; }
-        .pub-list .pub-venue-tag { font-weight: 700; color: #b45309; }
-        .pub-list .pub-authors { color: #475569; }
-        .pub-list .pub-venue { color: #475569; }
-        .pub-list .pub-link { font-size: 0.85rem; }
-        .pub-list .pub-link a { color: #92400e; }
-        .pub-list .me { font-weight: 700; color: #1e293b; }
-        .pub-list .pub-award { color: #dc2626; font-weight: 600; }
-
-        /* Education */
-        .edu-item { margin-bottom: 16px; }
-        .edu-item .school { font-weight: 600; color: #1e293b; }
-        .edu-item .degree { font-size: 0.93rem; color: #64748b; font-style: italic; }
-        .edu-item .meta { font-size: 0.85rem; color: #94a3b8; }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 30px 24px;
-            font-size: 0.82rem;
-            color: #94a3b8;
-            background: #fff;
-            border-top: 1px solid #e2e8f0;
-        }
-
-        @media (max-width: 640px) {
-            .header-inner { flex-direction: column; text-align: center; gap: 20px; }
-            .header-text .contact { justify-content: center; }
-            .avatar { width: 120px; height: 120px; }
-            .job-header { flex-direction: column; }
-        }
-    </style>
-</head>
-<body>
-
-<header class="header">
-    <div class="header-inner">
-        <img src="qingyy.jpg" alt="Qingyu Yin" class="avatar">
-        <div class="header-text">
-            <h1>Qingyu Yin</h1>
-            <p class="tagline">Post-training Lead & Science Manager at Amazon Rufus</p>
-            <div class="contact">
-                <span>yinqingyucn@gmail.com</span>
-                <a href="https://scholar.google.com/citations?user=P-mBKNYAAAAJ&hl=en" target="_blank">Google Scholar</a>
-                <a href="https://www.linkedin.com/in/qingyu-yin/" target="_blank">LinkedIn</a>
-                <span>Palo Alto, California</span>
-            </div>
-        </div>
+<div class="row">
+    <div class="col-lg-3 col-md-4">
+        {% include widgets/profile_card_mini.html %}
     </div>
-</header>
+    <div class="col-lg-9 col-md-8">
 
-<nav class="nav">
-    <div class="nav-inner">
-        <a href="#about" class="active">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#publications">Publications</a>
-        <a href="#education">Education</a>
+        {% include widgets/profile_card_bio_only.html %}
+
+        <!-- Debugging widgets -->
+        {% include widgets/debug_repo_name.html %}
+        {% include widgets/debug_url.html %}
+
+        {% if site.data.display.homepage.show_experience %}
+            {% include widgets/experience_card.html %}
+        {% endif %}
+
+        {% if site.data.display.homepage.show_news %}
+        {% assign count_news = site.news | size %}
+        {% if count_news > 0 %}
+        {% include widgets/news_card.html limit=site.data.display.homepage.num_news %}
+        {% endif %}
+        {% endif %}
+
+        <!-- Publications -->
+        <div class="card mb-3">
+            <div class="card-body">
+                <h4 class="font-weight-bold">Publications &amp; Preprints</h4>
+                <h6><a href="https://scholar.google.com/citations?user=P-mBKNYAAAAJ&hl=en" target="_blank">Google Scholar</a></h6>
+                <ul class="pub-list">
+                    <li>
+                        <strong class="pub-tag">[EMNLP'25]</strong> <strong>Can Language Models Follow Multiple Turns of Entangled Instructions?</strong><br>
+                        Chi Han, Xin Liu, Haodong Wang, Shiyang Li, Jingfeng Yang, Haoming Jiang, Zhengyang Wang, <strong class="pub-me">Qingyu Yin</strong>, et al.<br>
+                        EMNLP 2025 Findings.
+                    </li>
+                    <li>
+                        <strong class="pub-tag">[NAACL'25]</strong> <strong>IHEval: Evaluating Language Models on Following the Instruction Hierarchy</strong><br>
+                        Zhihan Zhang, Shiyang Li, Zixuan Zhang, Xin Liu, Haoming Jiang, Xianfeng Tang, Yifan Gao, Zheng Li, Haodong Wang, Zhaoxuan Tan, Yichuan Li, <strong class="pub-me">Qingyu Yin</strong>, Bing Yin, Meng Jiang.<br>
+                        NAACL 2025.
+                    </li>
+                    <li>
+                        <strong class="pub-tag">[npj Digital Medicine'25]</strong> <strong>A Multimodal Multidomain Multilingual Medical Foundation Model for Zero Shot Clinical Diagnosis</strong><br>
+                        Fenglin Liu, Zheng Li, <strong class="pub-me">Qingyu Yin</strong>, Jinfa Huang, et al.<br>
+                        npj Digital Medicine, 2025.
+                    </li>
+                    <li>
+                        <strong class="pub-tag">[NeurIPS'24]</strong> <strong>Shopping MMLU: A Massive Multi-Task Online Shopping Benchmark for Large Language Models</strong><br>
+                        Yilun Jin, Zheng Li, Chenwei Zhang, Tianyu Cao, Yifan Gao, Pratik Jayarao, Mao Li, Xin Liu, Ritesh Sarkhel, Xianfeng Tang, Haodong Wang, Zhengyang Wang, Wenju Xu, Jingfeng Yang, <strong class="pub-me">Qingyu Yin</strong>, et al.<br>
+                        NeurIPS 2024, KDD Cup'24.
+                    </li>
+                    <li>
+                        <strong class="pub-tag">[KDD'24]</strong> <strong>Understanding Inter-Session Intentions via Complex Logical Reasoning</strong><br>
+                        Jiaxin Bai, Chen Luo, Zheng Li, <strong class="pub-me">Qingyu Yin</strong>, Yangqiu Song.<br>
+                        KDD 2024.
+                    </li>
+                    <li>
+                        <strong class="pub-tag">[EMNLP'24]</strong> <strong>Large Language Models in the Clinic: A Comprehensive Benchmark</strong><br>
+                        Fenglin Liu, Zheng Li, Hongjian Zhou, <strong class="pub-me">Qingyu Yin</strong>, et al.<br>
+                        EMNLP 2024.
+                    </li>
+                    <li>
+                        <strong class="pub-tag">[NAACL'24]</strong> <strong>IterAlign: Iterative Constitutional Alignment of Large Language Models</strong><br>
+                        Xiusi Chen, Hongzhi Wen, Sreyashi Nag, Chen Luo, <strong class="pub-me">Qingyu Yin</strong>, Ruirui Li, Zheng Li, Wei Wang.<br>
+                        NAACL 2024.
+                    </li>
+                    <li>
+                        <strong class="pub-tag">[EMNLP'23]</strong> <strong>Knowledge-Selective Pretraining for Attribute Value Extraction</strong><br>
+                        Hui Liu, <strong class="pub-me">Qingyu Yin</strong>, Zhengyang Wang, et al.<br>
+                        EMNLP 2023 Findings.
+                    </li>
+                    <li>
+                        <strong class="pub-tag">[EMNLP'23]</strong> <strong>Improving Consistency for Text Summarization with Energy Functions</strong><br>
+                        Qi Zeng, <strong class="pub-me">Qingyu Yin</strong>, Zheng Li, et al.<br>
+                        EMNLP 2023 Findings.
+                    </li>
+                    <li>
+                        <strong class="pub-tag">[ACL'23]</strong> <strong>Context-Aware Query Rewriting for Improving Users' Search Experience on E-commerce Websites</strong><br>
+                        Simiao Zuo, <strong class="pub-me">Qingyu Yin</strong>, Haoming Jiang, Shaohui Xi, Bing Yin, Chao Zhang, Tuo Zhao.<br>
+                        ACL 2023.
+                    </li>
+                    <li>
+                        <strong class="pub-tag">[ACL'23]</strong> <strong>Graph Reasoning for Question Answering with Triplet Retrieval</strong><br>
+                        Shiyang Li, Yifan Gao, Haoming Jiang, <strong class="pub-me">Qingyu Yin</strong>, Zheng Li, Xifeng Yan, Chao Zhang, Bing Yin.<br>
+                        ACL 2023 Findings.
+                    </li>
+                    <li>
+                        <strong class="pub-tag">[KDD'23]</strong> <strong>Knowledge Graph Reasoning over Entities and Numerical Values</strong><br>
+                        Jiaxin Bai, Chen Luo, Zheng Li, <strong class="pub-me">Qingyu Yin</strong>, Bing Yin, Yangqiu Song.<br>
+                        KDD 2023.
+                    </li>
+                    <li>
+                        <strong class="pub-tag">[NAACL'22]</strong> <strong>Retrieval-Augmented Multilingual Keyphrase Generation with Retriever-Generator Iterative Training</strong><br>
+                        Yifan Gao, <strong class="pub-me">Qingyu Yin</strong>, Zheng Li, Rui Meng, et al.<br>
+                        NAACL 2022.
+                    </li>
+                    <li>
+                        <strong class="pub-tag">[NAACL'22]</strong> <strong>All Information Is Valuable: Question Matching over Full Information Transmission Network</strong><br>
+                        Le Qi, Yu Zhang, <strong class="pub-me">Qingyu Yin</strong>, Guidong Zheng, Wen Junjie, Jinlong Li, Ting Liu.<br>
+                        NAACL 2022.
+                    </li>
+                    <li>
+                        <strong class="pub-tag">[NAACL'22]</strong> <strong>SeqZero: Few-shot Compositional Semantic Parsing with Sequential Prompts and Zero-shot Models</strong><br>
+                        Jingfeng Yang, Haoming Jiang, <strong class="pub-me">Qingyu Yin</strong>, Danqing Zhang, Bing Yin, Diyi Yang.<br>
+                        NAACL 2022 Findings.
+                    </li>
+                    <li>
+                        <strong class="pub-tag">[NAACL'22]</strong> <strong>CERES: Pretraining of Graph-Conditioned Transformer for Semi-Structured Session Data</strong><br>
+                        Rui Feng, Chen Luo, <strong class="pub-me">Qingyu Yin</strong>, Bing Yin, Tuo Zhao, Chao Zhang.<br>
+                        NAACL 2022.
+                    </li>
+                    <li>
+                        <strong class="pub-tag">[EMNLP'21]</strong> <strong>Logic-level Evidence Retrieval and Graph-based Verification Network for Table-based Fact Verification</strong><br>
+                        Qi Shi, Yu Zhang, <strong class="pub-me">Qingyu Yin</strong>, Ting Liu.<br>
+                        EMNLP 2021.
+                    </li>
+                    <li>
+                        <strong class="pub-tag">[ACM TALLIP]</strong> <strong>Chinese Zero Pronoun Resolution: A Collaborative Filtering-based Approach</strong><br>
+                        <strong class="pub-me">Qingyu Yin</strong>, Yu Zhang, Weinan Zhang, Ting Liu.<br>
+                        ACM Transactions on Asian and Low-Resource Language Information Processing.
+                    </li>
+                    <li>
+                        <strong class="pub-tag">[ACL'19]</strong> <strong>Towards Explainable NLP: A Generative Explanation Framework for Text Classification</strong><br>
+                        Hui Liu, <strong class="pub-me">Qingyu Yin</strong>, William Yang Wang.<br>
+                        ACL 2019.
+                    </li>
+                    <li>
+                        <strong class="pub-tag">[ACL'18]</strong> <strong>Deep Reinforcement Learning for Chinese Zero Pronoun Resolution</strong><br>
+                        <strong class="pub-me">Qingyu Yin</strong>, Yu Zhang, Weinan Zhang, Ting Liu, William Yang Wang.<br>
+                        ACL 2018.
+                    </li>
+                    <li>
+                        <strong class="pub-tag">[COLING'18]</strong> <strong>Zero Pronoun Resolution with Attention-based Neural Network</strong><br>
+                        <strong class="pub-me">Qingyu Yin</strong>, Yu Zhang, Weinan Zhang, Ting Liu, William Yang Wang.<br>
+                        COLING 2018.
+                    </li>
+                    <li>
+                        <strong class="pub-tag">[EMNLP'17]</strong> <strong>Chinese Zero Pronoun Resolution with Deep Memory Network</strong><br>
+                        <strong class="pub-me">Qingyu Yin</strong>, Yu Zhang, Weinan Zhang, Ting Liu.<br>
+                        EMNLP 2017.
+                    </li>
+                    <li>
+                        <strong class="pub-tag">[CCIR'14]</strong> <strong>Joint Model for Ellipsis Identification and Recovery</strong><br>
+                        <strong class="pub-me">Qingyu Yin</strong>, Weinan Zhang, Yu Zhang, Ting Liu.<br>
+                        CCIR 2014. <span style="color: #dc3545; font-weight: 600;">Best Student Paper.</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
     </div>
-</nav>
-
-<div class="main">
-
-    <!-- About -->
-    <section id="about" class="about">
-        <h2>About</h2>
-        <p>
-            I am a Post-training Lead & Science Manager at Amazon, where I am a founding member of
-            <strong>Rufus</strong> &mdash; Amazon's LLM-powered shopping assistant. I trained the in-house LLM from
-            scratch and built Rufus end-to-end, from core model development to customer-facing features, and
-            successfully launched it worldwide.
-        </p>
-        <br>
-        <p>
-            I currently lead a team of 18 scientists owning end-to-end post-training for Rufus LLMs, covering
-            SFT and RL to improve core capabilities including reasoning, instruction following, agent, and
-            helpfulness. My research interests span large language model post-training, reinforcement learning
-            from human feedback, agentic AI, and NLP.
-        </p>
-        <br>
-        <p>
-            Prior to Rufus, I was a Senior Applied Scientist at Amazon Search, where I led the development of large-scale
-            query understanding and NLP systems serving millions of customers daily. I received my Ph.D. in Computer
-            Science from the Harbin Institute of Technology.
-        </p>
-    </section>
-
-    <!-- Experience -->
-    <section id="experience">
-        <h2>Experience</h2>
-
-        <div class="job">
-            <div class="job-header">
-                <span class="company">Amazon &mdash; Rufus, Store Foundation Modeling Team</span>
-                <span class="job-date">Mar 2023 &ndash; Present</span>
-            </div>
-            <div class="job-title">Post-training Lead & Science Manager</div>
-            <ul>
-                <li><span class="highlight-title">Core Post-Training Recipe:</span> Designed multi-stage training recipe integrating SFT, general RL, and agentic RL, adopted across multiple Rufus models. Post-trained models outperformed public releases on IFEval, AIME24/25, GPQA, and Arena-Hard.</li>
-                <li><span class="highlight-title">Rubric-based RL:</span> Built rubric-based RL recipe for non-verifiable tasks using mixed-granularity rubrics, improving controllability and alignment consistency while mitigating reward hacking.</li>
-                <li><span class="highlight-title">Search Agent:</span> Built the first agent optimized for Amazon Search with rule-based RL rewards. The agent, trained from an in-house base checkpoint, outperformed Claude Sonnet 4.5 on internal benchmarks.</li>
-                <li><span class="highlight-title">Live Traffic Alignment:</span> Developed generative reward models trained on multi-signal live traffic data to align model behavior with real-world customer preferences.</li>
-                <li><span class="highlight-title">Core Feature Development:</span> Partnered with Product team to design and launch core Rufus features worldwide, including product recommendation, comparison, and Product QA.</li>
-            </ul>
-        </div>
-
-        <div class="job">
-            <div class="job-header">
-                <span class="company">Amazon &mdash; Search, Query Understanding</span>
-                <span class="job-date">Jul 2019 &ndash; Mar 2023</span>
-            </div>
-            <div class="job-title">Applied Scientist</div>
-            <ul>
-                <li>Senior Applied Scientist owning end-to-end design, development, and deployment of large-scale search and NLP systems serving millions of customers daily.</li>
-                <li><span class="highlight-title">Query Parsing:</span> Led the first large-scale query parsing system at Amazon, enabling explicit attribute extraction to understand customer shopping intent. Adopted by dozens of internal teams with over $1B in incremental revenue impact.</li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- Publications -->
-    <section id="publications">
-        <h2>Publications &amp; Preprints</h2>
-        <p style="margin-bottom: 8px;"><a href="https://scholar.google.com/citations?user=P-mBKNYAAAAJ&hl=en" target="_blank">Google Scholar</a></p>
-        <ul class="pub-list">
-            <li>
-                <span class="pub-venue-tag">[EMNLP'25]</span> <span class="pub-title">Can Language Models Follow Multiple Turns of Entangled Instructions?</span><br>
-                Chi Han, Xin Liu, Haodong Wang, Shiyang Li, Jingfeng Yang, Haoming Jiang, Zhengyang Wang, <span class="me">Qingyu Yin</span>, et al.<br>
-                EMNLP 2025 Findings.
-            </li>
-            <li>
-                <span class="pub-venue-tag">[NAACL'25]</span> <span class="pub-title">IHEval: Evaluating Language Models on Following the Instruction Hierarchy</span><br>
-                Zhihan Zhang, Shiyang Li, Zixuan Zhang, Xin Liu, Haoming Jiang, Xianfeng Tang, Yifan Gao, Zheng Li, Haodong Wang, Zhaoxuan Tan, Yichuan Li, <span class="me">Qingyu Yin</span>, Bing Yin, Meng Jiang.<br>
-                NAACL 2025.
-            </li>
-            <li>
-                <span class="pub-venue-tag">[npj Digital Medicine'25]</span> <span class="pub-title">A Multimodal Multidomain Multilingual Medical Foundation Model for Zero Shot Clinical Diagnosis</span><br>
-                Fenglin Liu, Zheng Li, <span class="me">Qingyu Yin</span>, Jinfa Huang, et al.<br>
-                npj Digital Medicine, 2025.
-            </li>
-            <li>
-                <span class="pub-venue-tag">[NeurIPS'24]</span> <span class="pub-title">Shopping MMLU: A Massive Multi-Task Online Shopping Benchmark for Large Language Models</span><br>
-                Yilun Jin, Zheng Li, Chenwei Zhang, Tianyu Cao, Yifan Gao, Pratik Jayarao, Mao Li, Xin Liu, Ritesh Sarkhel, Xianfeng Tang, Haodong Wang, Zhengyang Wang, Wenju Xu, Jingfeng Yang, <span class="me">Qingyu Yin</span>, et al.<br>
-                NeurIPS 2024, KDD Cup'24.
-            </li>
-            <li>
-                <span class="pub-venue-tag">[KDD'24]</span> <span class="pub-title">Understanding Inter-Session Intentions via Complex Logical Reasoning</span><br>
-                Jiaxin Bai, Chen Luo, Zheng Li, <span class="me">Qingyu Yin</span>, Yangqiu Song.<br>
-                KDD 2024.
-            </li>
-            <li>
-                <span class="pub-venue-tag">[EMNLP'24]</span> <span class="pub-title">Large Language Models in the Clinic: A Comprehensive Benchmark</span><br>
-                Fenglin Liu, Zheng Li, Hongjian Zhou, <span class="me">Qingyu Yin</span>, et al.<br>
-                EMNLP 2024.
-            </li>
-            <li>
-                <span class="pub-venue-tag">[NAACL'24]</span> <span class="pub-title">IterAlign: Iterative Constitutional Alignment of Large Language Models</span><br>
-                Xiusi Chen, Hongzhi Wen, Sreyashi Nag, Chen Luo, <span class="me">Qingyu Yin</span>, Ruirui Li, Zheng Li, Wei Wang.<br>
-                NAACL 2024.
-            </li>
-            <li>
-                <span class="pub-venue-tag">[EMNLP'23]</span> <span class="pub-title">Knowledge-Selective Pretraining for Attribute Value Extraction</span><br>
-                Hui Liu, <span class="me">Qingyu Yin</span>, Zhengyang Wang, et al.<br>
-                EMNLP 2023 Findings.
-            </li>
-            <li>
-                <span class="pub-venue-tag">[EMNLP'23]</span> <span class="pub-title">Improving Consistency for Text Summarization with Energy Functions</span><br>
-                Qi Zeng, <span class="me">Qingyu Yin</span>, Zheng Li, et al.<br>
-                EMNLP 2023 Findings.
-            </li>
-            <li>
-                <span class="pub-venue-tag">[ACL'23]</span> <span class="pub-title">Context-Aware Query Rewriting for Improving Users' Search Experience on E-commerce Websites</span><br>
-                Simiao Zuo, <span class="me">Qingyu Yin</span>, Haoming Jiang, Shaohui Xi, Bing Yin, Chao Zhang, Tuo Zhao.<br>
-                ACL 2023.
-            </li>
-            <li>
-                <span class="pub-venue-tag">[ACL'23]</span> <span class="pub-title">Graph Reasoning for Question Answering with Triplet Retrieval</span><br>
-                Shiyang Li, Yifan Gao, Haoming Jiang, <span class="me">Qingyu Yin</span>, Zheng Li, Xifeng Yan, Chao Zhang, Bing Yin.<br>
-                ACL 2023 Findings.
-            </li>
-            <li>
-                <span class="pub-venue-tag">[KDD'23]</span> <span class="pub-title">Knowledge Graph Reasoning over Entities and Numerical Values</span><br>
-                Jiaxin Bai, Chen Luo, Zheng Li, <span class="me">Qingyu Yin</span>, Bing Yin, Yangqiu Song.<br>
-                KDD 2023.
-            </li>
-            <li>
-                <span class="pub-venue-tag">[NAACL'22]</span> <span class="pub-title">Retrieval-Augmented Multilingual Keyphrase Generation with Retriever-Generator Iterative Training</span><br>
-                Yifan Gao, <span class="me">Qingyu Yin</span>, Zheng Li, Rui Meng, et al.<br>
-                NAACL 2022.
-            </li>
-            <li>
-                <span class="pub-venue-tag">[NAACL'22]</span> <span class="pub-title">All Information Is Valuable: Question Matching over Full Information Transmission Network</span><br>
-                Le Qi, Yu Zhang, <span class="me">Qingyu Yin</span>, Guidong Zheng, Wen Junjie, Jinlong Li, Ting Liu.<br>
-                NAACL 2022.
-            </li>
-            <li>
-                <span class="pub-venue-tag">[NAACL'22]</span> <span class="pub-title">SeqZero: Few-shot Compositional Semantic Parsing with Sequential Prompts and Zero-shot Models</span><br>
-                Jingfeng Yang, Haoming Jiang, <span class="me">Qingyu Yin</span>, Danqing Zhang, Bing Yin, Diyi Yang.<br>
-                NAACL 2022 Findings.
-            </li>
-            <li>
-                <span class="pub-venue-tag">[NAACL'22]</span> <span class="pub-title">CERES: Pretraining of Graph-Conditioned Transformer for Semi-Structured Session Data</span><br>
-                Rui Feng, Chen Luo, <span class="me">Qingyu Yin</span>, Bing Yin, Tuo Zhao, Chao Zhang.<br>
-                NAACL 2022.
-            </li>
-            <li>
-                <span class="pub-venue-tag">[EMNLP'21]</span> <span class="pub-title">Logic-level Evidence Retrieval and Graph-based Verification Network for Table-based Fact Verification</span><br>
-                Qi Shi, Yu Zhang, <span class="me">Qingyu Yin</span>, Ting Liu.<br>
-                EMNLP 2021.
-            </li>
-            <li>
-                <span class="pub-venue-tag">[ACM TALLIP]</span> <span class="pub-title">Chinese Zero Pronoun Resolution: A Collaborative Filtering-based Approach</span><br>
-                <span class="me">Qingyu Yin</span>, Yu Zhang, Weinan Zhang, Ting Liu.<br>
-                ACM Transactions on Asian and Low-Resource Language Information Processing.
-            </li>
-            <li>
-                <span class="pub-venue-tag">[ACL'19]</span> <span class="pub-title">Towards Explainable NLP: A Generative Explanation Framework for Text Classification</span><br>
-                Hui Liu, <span class="me">Qingyu Yin</span>, William Yang Wang.<br>
-                ACL 2019.
-            </li>
-            <li>
-                <span class="pub-venue-tag">[ACL'18]</span> <span class="pub-title">Deep Reinforcement Learning for Chinese Zero Pronoun Resolution</span><br>
-                <span class="me">Qingyu Yin</span>, Yu Zhang, Weinan Zhang, Ting Liu, William Yang Wang.<br>
-                ACL 2018.
-            </li>
-            <li>
-                <span class="pub-venue-tag">[COLING'18]</span> <span class="pub-title">Zero Pronoun Resolution with Attention-based Neural Network</span><br>
-                <span class="me">Qingyu Yin</span>, Yu Zhang, Weinan Zhang, Ting Liu, William Yang Wang.<br>
-                COLING 2018.
-            </li>
-            <li>
-                <span class="pub-venue-tag">[EMNLP'17]</span> <span class="pub-title">Chinese Zero Pronoun Resolution with Deep Memory Network</span><br>
-                <span class="me">Qingyu Yin</span>, Yu Zhang, Weinan Zhang, Ting Liu.<br>
-                EMNLP 2017.
-            </li>
-            <li>
-                <span class="pub-venue-tag">[CCIR'14]</span> <span class="pub-title">Joint Model for Ellipsis Identification and Recovery</span><br>
-                <span class="me">Qingyu Yin</span>, Weinan Zhang, Yu Zhang, Ting Liu.<br>
-                CCIR 2014. <span class="pub-award">Best Student Paper.</span>
-            </li>
-        </ul>
-    </section>
-
-    <!-- Education -->
-    <section id="education">
-        <h2>Education</h2>
-        <div class="edu-item">
-            <div class="school">Harbin Institute of Technology</div>
-            <div class="degree">Ph.D. in Computer Science &mdash; Advisor: Professor Ting Liu</div>
-            <div class="meta">Sep 2013 &ndash; Jul 2019 &ensp;|&ensp; Harbin, China</div>
-        </div>
-        <div class="edu-item">
-            <div class="school">Harbin Institute of Technology</div>
-            <div class="degree">B.S. in Computer Science</div>
-            <div class="meta">Sep 2009 &ndash; Jun 2013 &ensp;|&ensp; Harbin, China</div>
-        </div>
-    </section>
-
 </div>
-
-<footer>
-    &copy; 2025 Qingyu Yin. All rights reserved.
-</footer>
-
-<script>
-    // Smooth scroll & active nav
-    document.querySelectorAll('.nav a').forEach(link => {
-        link.addEventListener('click', e => {
-            e.preventDefault();
-            const target = document.querySelector(link.getAttribute('href'));
-            if (target) target.scrollIntoView({ behavior: 'smooth' });
-            document.querySelectorAll('.nav a').forEach(l => l.classList.remove('active'));
-            link.classList.add('active');
-        });
-    });
-    window.addEventListener('scroll', () => {
-        const sections = document.querySelectorAll('section');
-        let current = '';
-        sections.forEach(s => {
-            if (window.scrollY >= s.offsetTop - 80) current = s.id;
-        });
-        document.querySelectorAll('.nav a').forEach(l => {
-            l.classList.toggle('active', l.getAttribute('href') === '#' + current);
-        });
-    });
-</script>
-
-</body>
-</html>

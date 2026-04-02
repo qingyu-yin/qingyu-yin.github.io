@@ -1,0 +1,52 @@
+primary_name: "Qingyu Yin"
+secondary_name: ""
+navbar_name: "Qingyu Yin"
+
+positions:
+- name: Post-training Lead & Science Manager
+- name: Amazon Rufus
+
+email: "yinqingyucn@gmail.com"
+cv_link: /Qingyu_Resume-latest.pdf
+gscholar: P-mBKNYAAAAJ
+# github: your_github_id
+linkedin: qingyu-yin
+
+short_bio_text_justify: false
+short_bio: >-
+  <p>
+    I am a Post-training Lead & Science Manager at Amazon, where I am a founding member of
+    <strong>Rufus</strong> &mdash; Amazon's LLM-powered shopping assistant. I trained the in-house LLM from
+    scratch and built Rufus end-to-end, from core model development to customer-facing features, and
+    successfully launched it worldwide.
+  </p>
+  <p>
+    I currently lead a team of 18 scientists owning end-to-end post-training for Rufus LLMs, covering
+    SFT and RL to improve core capabilities including reasoning, instruction following, agent, and
+    helpfulness. My research interests span large language model post-training, reinforcement learning
+    from human feedback, agentic AI, and NLP.
+  </p>
+  <p>
+    Prior to Rufus, I was a Senior Applied Scientist at Amazon Search, where I led the development of large-scale
+    query understanding and NLP systems serving millions of customers daily. I received my Ph.D. in Computer
+    Science from the Harbin Institute of Technology.
+  </p>
+
+portrait_url: /assets/images/photos/portrait.jpg
+# portrait_caption: >-
+
+education:
+- name: Harbin Institute of Technology
+  position: "Ph.D. in Computer Science &mdash; Advisor: Professor Ting Liu"
+  date: Sep. 2013 - Jul. 2019
+- name: Harbin Institute of Technology
+  position: B.S. in Computer Science
+  date: Sep. 2009 - Jun. 2013
+
+experience:
+- name: Amazon &mdash; Rufus, Store Foundation Modeling Team
+  position: Post-training Lead & Science Manager
+  date: Mar. 2023 - Present
+- name: Amazon &mdash; Search, Query Understanding
+  position: Applied Scientist
+  date: Jul. 2019 - Mar. 2023
