@@ -10,25 +10,15 @@ email: "yinqingyucn@gmail.com"
 # cv_link: /Qingyu_Resume-latest.pdf
 gscholar: P-mBKNYAAAAJ
 # github: your_github_id
-linkedin: qingyu-yin
+linkedin: qingyu-yin-1795b4120
 
 short_bio_text_justify: false
-short_bio: >-
+short_bio: >
   <p>
-    I am a Post-training Lead & Science Manager at <strong>Rufus</strong>, Amazon's LLM-powered shopping assistant. We trained the in-house LLM from
-    scratch and built Rufus end-to-end, from core model development to customer-facing features, and
-    successfully launched it worldwide.
+  I lead post-training for Rufus, Amazon LLM-powered shopping assistant. As a founding member, I built the in-house foundation models from scratch and build Rufus end-to-end, from core modeling to customer-facing experiences. I currently lead a team of 30 scientists, owning the full post-training stack across SFT and RL. We design and scale post-training recipes to advance core capabilities—reasoning, instruction following, agentic behavior, and helpfulness—while driving application-level preference alignment for Rufus.
   </p>
   <p>
-    <strong>I lead 30 scientists owning the end-to-end post-training stack for Rufus LLMs</strong>, spanning
-    SFT and RL. We design and scale post-training recipes to advance core capabilities, including
-    reasoning, instruction following, agentic, and helpfulness, and drive application-level preference
-    alignment for Rufus.
-  </p>
-  <p>
-    Prior to Rufus, I was a Senior Applied Scientist at Amazon Search, where I led the development of large-scale
-    query understanding and NLP systems serving millions of customers daily. I received my Ph.D. in Computer
-    Science from the Harbin Institute of Technology.
+    Prior to Rufus, I was an Applied Scientist at Query Understanding team (Amazon Search), where I led the development of large-scale query parsing and NLP systems serving millions of customers daily.
   </p>
 
 portrait_url: /assets/images/photos/portrait.jpg
